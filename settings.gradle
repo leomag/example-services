@@ -1,0 +1,6 @@
+rootProject.name = 'example-services'
+
+includeBuild 'eureka-server'
+includeBuild 'samokat-client'
+includeBuild 'gateway'
+includeBuild 'delivery-client'
