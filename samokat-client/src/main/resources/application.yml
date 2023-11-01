@@ -7,6 +7,16 @@ spring:
   application:
     name: samokat
 
+  profiles:
+    active: ${PROFILE:dev}
+  config:
+    import: optional:configserver:${CONFIG_SERVER_URL:http://127.0.0.1:9991}
+  cloud:
+    config:
+      label: ${CONFIG_BRANCH:main}
+      username: ${SERVER_USER:leo}
+      password: ${SERVER_PASSWORD:leo_password}
+
 eureka:
   client:
     service-url:
